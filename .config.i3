@@ -150,8 +150,6 @@ bindsym $mod+r mode "resize"
 # in the pulseaudio commands, 1 is the sink number found with "pactl list sinks"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
-#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
@@ -161,7 +159,7 @@ bindsym XF86AudioPrev exec playerctl previous
 hide_edge_borders none 
 
 # wallpaper with feh
-exec --no-startup-id feh --bg-scale ~/Downloads/side-view-of-woman-in-illuminated-city-at-night-315191.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/top_of_skyscraper_selfie-wallpaper-1680x1050.jpg
 
 
 # class                 border  bground text    indicator child_border

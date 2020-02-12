@@ -27,5 +27,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 setxkbmap -option caps:swapescape
-
 setxkbmap -layout us -variant altgr-intl
