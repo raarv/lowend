@@ -27,7 +27,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal 
+bindsym $mod+Return exec st 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -89,6 +89,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# custom keybinds
+bindsym mod1+t exec st
+bindsym mod1+f exec firefox
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2

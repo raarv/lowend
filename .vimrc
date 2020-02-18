@@ -9,7 +9,7 @@ call plug#begin('/home/raarv/.vim/plugins')
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'vim-scripts/ReplaceWithRegister'
+"Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-system-copy'
@@ -17,12 +17,11 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
-Plug 'sheerun/vim-polyglot'
-Plug 'vim-latex/vim-latex'
+"Plug 'sheerun/vim-polyglot'
+Plug 'lervag/vimtex'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'dracula/vim'
 call plug#end()
 
 :set encoding=utf-8
@@ -55,7 +54,7 @@ nnoremap <space> za
 "nnoremap <C-L> <C-W><C-L>
 "nnoremap <C-H> <C-W><C-H>
 
-color dracula
+color torte
 
 if has('gui_running')
    set guifont=Consolas:h12:cANSI:qDRAFT
@@ -77,3 +76,11 @@ set noswapfile
 
 "enable python 3 syntax checking on python-mode
 let g:pymode_python = 'python3'
+" Vimtex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+" Disabling latex from polyglot
+let g:polyglot_disabled = ['latex']
