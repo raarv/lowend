@@ -22,6 +22,7 @@ Plug 'lervag/vimtex'
 Plug 'christoomey/vim-tmux-navigator'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'dracula/vim'
 call plug#end()
 
 :set encoding=utf-8
@@ -54,11 +55,7 @@ nnoremap <space> za
 "nnoremap <C-L> <C-W><C-L>
 "nnoremap <C-H> <C-W><C-H>
 
-color torte
-
-if has('gui_running')
-   set guifont=Consolas:h12:cANSI:qDRAFT
-endif
+color dracula 
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
@@ -69,6 +66,8 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+
+set textwidth=80
 
 set nobackup
 set nowritebackup

@@ -10,7 +10,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -23,21 +23,32 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# keybind for script that toggles the touchpad
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec st 
 
+# KeePass
+bindsym mod1+k exec keepassxc
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# toggle trackpad on and off
+bindsym mod1+z exec synclient touchpadoff=0
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# i3lock image
+#set $i3lockwall i3lock -i ~/Pictures/Custom_BG/zq01j5.png -t
 
 # change focus
 bindsym $mod+j focus left
@@ -91,6 +102,7 @@ bindsym $mod+a focus parent
 
 # custom keybinds
 bindsym mod1+t exec st
+bindsym mod1+return exec st
 bindsym mod1+f exec firefox
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -162,7 +174,7 @@ bindsym XF86AudioPrev exec playerctl previous
 hide_edge_borders none 
 
 # wallpaper with feh
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/top_of_skyscraper_selfie-wallpaper-1680x1050.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Custom_BG/zq01j5.png
 
 
 # class                 border  bground text    indicator child_border
